@@ -66,7 +66,9 @@ export class ProcessingService {
   }
 
   fromFtoC(f: number): number{
-    return (f-32)*(5/9);
+    const celsius = (f-32)*(5/9);
+    const rounded = Math.round (celsius * 10) / 10;
+    return rounded;
   }
 
 }
